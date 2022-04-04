@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>Century Real Estate : Commercial Projects</title>
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://www.centuryrealestate.in/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://www.centuryrealestate.in/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="theme-color" content="#88e0e5">
+
+        <link rel="preload" href="assets/css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="assets/css/vanilla-tabs.min.css" />
+        <style>
+            .page_loader, .wait_loader {
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background: url(assets/images/img_loader.gif) no-repeat scroll center center #fff;
+                z-index: 999999999;
+                cursor: wait;
+            }
+            .show_pointer {cursor: pointer}
+            .page_loader {
+                opacity: 1;
+            }
+            .wait_loader {opacity: 0.6;display: none;}
+            .error span {display:none;}
+            .error {width:100%; text-align:left; height:10px; font-size:13px; color:white;}
+            .project__enquiry .error {color:black !IMPORTANT;}
+        </style>
+    </head>
+    <body>
+        <div class="page_loader"></div>
+        <div class="wait_loader"></div>
+        <header class="container-fluid {{$navigation_class}}">
+            <div class="row custom-row">
+                <div class="col-6 col-md-3 col-lg-2 logo">
+                    <a href="{{url('/')}}">
+                        <img loading="lazy" src="assets/images/global/logo-white.png" alt="Century" class="img-fluid" width="207" height="121">
+                    </a>
+                </div>
+                <nav class="col-6 col-md-9 col-lg-10 nav">
+                    <ul>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#">Why Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <!-- <li>
+                            <a href="{{url('/')}}/rising-north">Rising North</a>
+                        </li> -->
+
+                        <li>
+                            <div class="nav__hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="sidemenu">
+                    <div class="sidemenu__hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sidemenu__top">
+                        <ul>
+                            <li class="mobile"><a href="{{url('/')}}/about">About</a></li>
+                            <li class="mobile"><a href="{{url('/')}}/projects">Projects</a></li>
+                            <li class="mobile"><a href="{{url('/')}}/why-us">Why Us</a></li>
+                            <li class="mobile"><a href="{{url('/')}}/contact-us">Contact Us</a></li>
+
+                            <li><a href="#">Media</a></li>
+                            <li><a href="#">Awards</a></li>
+                            <li><a href="#">Referrals</a></li>
+                            <li><a href="#">NRI Corner</a></li>
+                            <li><a href="#">Century Connect</a></li>
+                            <li><a href="#">Social Responsibility</a></li>
+                            <li><a href="#">Customer Testimonials</a></li>
+                            <li><a href="#">Life at Century</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <div class="scroller" data-scroll-container>
+        	<div class="header-gap bg-pink"></div>
+            <section class="media-slide">
+            	<div class="container-fluid p-0">
+                	<div class="row m-0">
+                    	<div class="col-md-12 p-0">
+                        	<div class="comercial-slider owl-carousel owl-theme owl-loaded owl-drag">
+                            	<div class="item">
+                                  <img src="assets/images/commercial-projects/Slider01.jpg" class="img-fluid d-none d-md-block">
+                                  <img src="assets/images/commercial-projects/commercial-projects-top-slide-xs-1.jpg" class="img-fluid d-block d-md-none">
+                                </div>
+                                <div class="item">
+                                  <img src="assets/images/commercial-projects/Slider02.jpg" class="img-fluid d-none d-md-block">
+                                  <img src="assets/images/commercial-projects/commercial-projects-top-slide-xs-2.jpg" class="img-fluid d-block d-md-none">
+                                </div>
+                                <div class="item">
+                                  <img src="assets/images/commercial-projects/Slider03.jpg" class="img-fluid d-none d-md-block">
+                                  <img src="assets/images/commercial-projects/commercial-projects-top-slide-xs-3.jpg" class="img-fluid d-block d-md-none">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/commercial-projects/Slider04.jpg" class="img-fluid d-none d-md-block">
+                                    <img src="assets/images/commercial-projects/commercial-projects-top-slide-xs-4.jpg" class="img-fluid d-block d-md-none">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gap-medium bg-gray">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-12">
+                        	<div class="fancy-line"></div>
+                        </div>
+                    </div>
+                	<div class="row">
+                    	<div class="col-md-12">
+                        	<h1 class="section-title corporatesbold bold text-uppercase ">The Company</h1>
+                            <p class="mb-0 font-18">Century Real Estate has come to be recognized in the industry, as one of the oldest, most trusted and reliable brands for partners, investors, and homeowners alike. Over the years, the growth of Century Real Estate has come to mirror the growth of Bengaluru as one of Asia's fastest-growing global metro hubs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gap-medium parallax mh-600 d-flex align-items-start align-items-md-center" style="background-image:url(assets/images/commercial-projects/cre-bg.jpg)">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-7">
+                        	<h5 class="font-32 corporatesdemi red mb-3">Commercial Real Estate</h5>
+                            <h1 class="font-52 section-title corporatesdemi bold mw-xs-285">On its course for unprecedented growth, yet again.</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gap-medium">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-12">
+                        	<ul id="commercialTabs" class="tabs">
+                              <li data-title="Workplace Strategies">
+                                <div class="row">
+                                    <div class="col-md-8 order-2 order-md-1">
+                                    	<h2 class="font-28 d-none d-md-block">Workplace Strategies</h2>
+                                        <div class="fancy-line d-none d-md-block"></div>
+                                        <p class="font-20"><strong>Co-working Sector:</strong> It accounted for 19% of transactions in 2021 – a significant  jump over the 12% share in 2020. In Q4 2021, co-working operators took up 42%  of space.</p>
+                                        <p class="font-20"><strong>Sustained flexibility</strong> in lease terms and tenures to be critical.</p>
+                                        <p class="font-20"><strong>Physical offices to stay:</strong> portfolio optimization via the right mix of traditional and flexible spaces - Evolution of a ‘traditional’ to ‘hybrid’ workforce via work-from-any where.</p>
+                                        <p class="font-20"><strong>Workplace strategies</strong> - Repositioning spaces, amenities and services through ‘phygital’ experiences; tech-enhanced spaces to serve as a differentiator of quality.</p>
+                                        <p class="font-20"><strong>Environmental, Social and Corporate Governance (ESG), health and wellness</strong> likely to be at the forefront of CRE strategies; employee productivity to be key.</p>
+                                    </div>
+                                     <div class="col-md-4 order-1 order-md-2">
+                                     	<img src="assets/images/commercial-projects/workplace-strategies-img.jpg" class="img-fluid mb-4 mb-md-0">
+                                     </div>
+                                </div>
+                              </li>
+                              <li data-title="Sectors">
+                              	<div class="row">
+                                    <div class="col-md-8 order-2 order-md-1">
+                                    	<h2 class="d-none d-md-block">Sectors</h2>
+                                        <div class="fancy-line d-none d-md-block"></div>
+                                        <p class="font-20">Post COVID-19, <strong>India to remain a preferred global outsourcing Destination on the back of low-cost knowledge talent;</strong> expected Systematic growth of global capability centres, start-ups and gig Workers.</p>
+                                        <p class="font-20">The Information Technology Sector, which is the main driver for the<strong> Bengaluru office market taking up 39% transactions share throughout The year,</strong> continues to enjoy robust business momentum.</p>
+                                        <p class="font-20"> Preparing for manpower and infrastructure capabilities to secure global IT projects,<strong>the Indian IT sector made record hiring amid the pandemic,</strong> And this will serve as dry powder for office demand when the<strong>Omicron Uncertainty subsides.</strong> </p>
+
+                                    </div>
+                                     <div class="col-md-4 order-1 order-md-2">
+                                     	<img src="assets/images/commercial-projects/sectors.jpg" class="img-fluid mb-4 mb-md-0">
+                                     </div>
+                                </div>
+
+                              </li>
+                              <li data-title="Micro Market">
+                              		<div class="row">
+                                    <div class="col-md-8 order-2 order-md-1">
+                                    	<h2 class="d-none d-md-block">Micro Market</h2>
+                                        <div class="fancy-line d-none d-md-block"></div>
+                                        <p class="font-20">ORR continues to be the dominant market with<strong> 39% transaction shareFollowed by PBD North, PBD East (Whitefield) and SBD at 17%, 15% and15% respectively during H2 2021.</strong></p>
+                                        <p class="font-20">Peripheral markets like Whitefield, Hosur Road & Electronic City are Witnessing renewed interest<strong> owing to metro lines nearing completion,Improved support infrastructure & lower top line rentals.</strong></p>
+                                        <p class="font-20">With increased deal activity in <strong>Hebbal, Yelahanka and Thanisandra Road,The PBD North business district </strong>has seen its share increasing meaningfully Compared to past periods.</p>
+
+                                    </div>
+                                     <div class="col-md-4 order-1 order-md-2">
+                                     	<img src="assets/images/commercial-projects/micromarket.jpg" class="img-fluid mb-4 mb-md-0">
+                                     </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gap-medium parallax fancy-white mh-750 d-flex align-items-start align-items-md-center" style="background-image:url(assets/images/commercial-projects/bangluru-banner.jpg);">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-6">
+                        	<div class="fancy-title">Bengaluru <span class="line">&nbsp;</span></div>
+                            <h1 class="corporatesbold text-uppercase">A Dominant<br> Force</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+            	<img src="assets/images/commercial-projects/bengluru-at-top.jpg" class="img-fluid d-none d-md-block">
+                <img src="assets/images/commercial-projects/bengluru-at-top-xs.jpg" class="img-fluid d-block d-md-none">
+            </section>
+
+            <section class="gap-medium parallax fancy-white mh-750 d-flex align-items-start align-items-md-center" style="background-image:url(assets/images/commercial-projects/projects-at-glance-bg.jpg);">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-6">
+                        	<div class="fancy-title">Bengaluru <span class="line">&nbsp;</span></div>
+                            <h1 class="corporatesbold text-uppercase">Projects at a glance</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gap-medium">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-6">
+                        	<div class="project-details-table">
+                        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <th scope="col" valign="top">Project Name</th>
+                                <th scope="col" valign="top">Available space (sq.ft)</th>
+                              </tr>
+                              <tr>
+                                <td>Century Arcade</td>
+                                <td>13,600 </td>
+                              </tr>
+                              <tr>
+                                <td>Century SNS </td>
+                                <td>20,500</td>
+                              </tr>
+                              <tr>
+                                <td>HM Tech Park</td>
+                                <td>37,796</td>
+                              </tr>
+                              <tr>
+                                <td>Century Craig Park</td>
+                                <td>9,400</td>
+                              </tr>
+                              <tr>
+                                <td>Century Artizan </td>
+                                <td>200,426</td>
+                              </tr>
+                              <tr>
+                                <td>Century Nester</td>
+                                <td>15,048</td>
+                              </tr>
+                            </table>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                        	<img src="assets/images/commercial-projects/projects-map.jpg" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gap-medium pt-0">
+            	<div class="projects-slider owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="item">
+                      <div class="project-thumb" style="background-image:url(assets/images/commercial-projects/Century-Arcade.jpg);">
+                      	<div class="project-info">
+                        	<h4>Century Arcade</h4>
+                            <h6>Malleswaram</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <a href="project-detail.html" class="btn bnt-default">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="project-thumb" style="background-image:url(assets/images/commercial-projects/Century-Nester.jpg);">
+                      	<div class="project-info">
+                        	<h4>Century NESTER</h4>
+                            <h6>Banerghatta Road</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <a href="project-detail.html" class="btn bnt-default">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="project-thumb" style="background-image:url(assets/images/commercial-projects/Century-HM-Tech-Park.jpg);">
+                      	<div class="project-info">
+                        	<h4>HM Tech Park</h4>
+                            <h6>Whitefield</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <a href="project-detail.html" class="btn bnt-default">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="project-thumb" style="background-image:url(assets/images/commercial-projects/century-craigpark.jpg);">
+                      	<div class="project-info">
+                        	<h4>Century Craig Park</h4>
+                            <h6>Lavelle Road</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <a href="project-detail.html" class="btn bnt-default">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="project-thumb" style="background-image:url(assets/images/commercial-projects/Century-SNS-Tower.jpg);">
+                      	<div class="project-info">
+                        	<h4>Century SNS Tower</h4>
+                            <h6>Lavelle Road</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <a href="project-detail.html" class="btn bnt-default">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                        <div class="project-thumb" style="background-image:url(assets/images/commercial-projects/Century-Artizen.jpg);">
+                            <div class="project-info">
+                              <h4>Century Artizen</h4>
+                              <h6>Yelahanka</h6>
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              <a href="project-detail.html" class="btn bnt-default">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <footer class="container-fluid footer" data-scroll-offset="5%" data-scroll-repeat data-scroll data-scroll-class="inView">
+                <div class=" row custom-row footer__top align-items-center">
+                    <div class="col-12 col-sm-12 col-md-3">
+                        <div class="footer__top__logo">
+                            <img loading="lazy" src="assets/images/global/logo-color.png" alt="Century Propery" class="img-fluid" width="254" height="155">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="footer__top__address">
+                            <p class="paragraph">No. 3/1 Fourth Floor, J P Techno Park, Millers Road,<br> Bangalore - 560052, India</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3">
+                        <div class="footer__top__social">
+                            <ul>
+                                <li><a href="https://www.facebook.com/centuryrealestatebangalore" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/centuryrealestate/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/centuryblr" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://www.linkedin.com/company/century-real-estate-holdings-pvt-ltd" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row custom-row footer__bottom">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="footer__bottom__links">
+                            <ul>
+                                <li><a href="{{url('/')}}/projects">Projects</a></li>
+
+                                <li><a href="{{url('/')}}/disclaimer">Disclaimer</a></li>
+                                <li><a href="{{url('/')}}/terms">T&C</a></li>
+                                <li><a href="{{url('/')}}/privacy">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="footer__bottom__p">
+                            <p class="paragraph">&copy;  by Century Real Estate Holdings Pvt. Ltd. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+
+        <div class="disclaimer">
+            <div class="disclaimer__inner">
+                <div class="disclaimer__inner__title">
+                    DISCLAIMER
+                </div>
+                <div class="disclaimer__inner__content">
+                    <p>By accessing this website, the viewer confirms that the information including
+                        brochures and
+                        marketing
+                        collaterals on this website are solely for informational purposes only. Nothing on this website,
+                        constitutes advertising, marketing, booking, selling or an offer for sale, or invitation to
+                        purchase
+                        a unit in any project by the Company. This website is for guidance only. It does not constitute
+                        part
+                        of an offer or contract. Design & specifications are subject to change without prior notice.
+                        Computer generated images are the artist's impression and are an indicative of the actual
+                        designs.<br><br>
+                        The particulars contained on the mentions details of the Projects/developments undertaken by the
+                        Company including
+                        depicting banners/posters of the Project. The contents are being modified in terms of the
+                        stipulations / recommendations under the Real Estate Regulation Act, 2016 and Rules made
+                        thereunder
+                        ("RERA") and accordingly may not be fully in line thereof as of date. You are therefore required
+                        to
+                        verify all the details, including area, amenities, services, terms of sales and payments and
+                        other
+                        relevant terms independently with the sales team/ company prior to concluding any decision for
+                        buying any unit(s) in any of the said projects. Till such time the details are fully updated,
+                        the
+                        said information
+                        will not be construed as an advertisement.<br><br>
+                        In no event will the Company be liable for claim made by the users including seeking any
+                        cancellation for any of the
+                        inaccuracies in the information provided in this website, though all efforts have to be made to
+                        ensure accuracy. The
+                        Company will no circumstance will be liable for any expense, loss or damage including, without
+                        limitation, indirect or
+                        consequential loss or damage, or any expense, loss or damage whatsoever arising from use, or
+                        loss of
+                        use, of data,
+                        arising out of or in connection with the use of this website.
+                    </p>
+                    <span>read more</span>
+                </div>
+                <div class="disclaimer__inner__link">
+                    <span>I Agree</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="backdrop"></div>
+        <link rel="preload" href="assets/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/css/jquery.magnify.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/css/locomotive-scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <script src="assets/js/jquery.min.js" defer></script>
+        <script src="assets/js/popper.min.js" defer></script>
+        <script src="assets/js/bootstrap.min.js" defer></script>
+        <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js" defer></script>
+        <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js" defer></script>
+        <script src="assets/js/owl.carousel.min.js" defer></script>
+        <script src="assets/js/jquery.magnify.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js" defer></script>
+        <script src="assets/js/custom.js?v={{time()}}" defer></script>
+        <script src="assets/js/main.js" defer></script>
+        <script src="assets/js/vanilla-tabs.min.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+			jQuery(document).ready(function(){
+				$('.comercial-slider').owlCarousel({
+				items:1,
+				loop:true,
+				dost:true,
+				margin:0,
+				autoplay:true,
+				//slideTransition: 'linear',
+				autoplaySpeed: 3000,
+				responsive:{
+					0:{
+						items:1
+						},
+					600:{
+						items:1
+						}
+					}
+				});
+
+				$('.projects-slider').owlCarousel({
+				center: true,
+				items:2,
+				loop:true,
+				margin:20,
+				nav: true,
+            	navText:["<div class='nav-btn prev-slide'><i class='fa fa-angle-left'></i> </div>","<div class='nav-btn next-slide'><i class='fa fa-angle-right'></i></div>"],
+				autoplay:true,
+				slideTransition: 'linear',
+				autoplaySpeed: 1000,
+				//autoplayTimeout: 4000,
+				autoplayHoverPause:false,
+				responsive:{
+					0:{
+						items:1,
+						margin:15,
+						center: false,
+					},
+					600:{
+						items:3,
+					},
+					1000:{
+						items:4,
+					}
+				}
+				});
+		});
+        </script>
+        <script>
+		document.addEventListener('DOMContentLoaded', () => {
+
+			// create horizontal tabs
+			new VanillaTabs({
+				'selector': '#commercialTabs',	// default is ".tabs"
+				'type': 'horizontal', 	// can be horizontal / vertical / accordion
+				'responsiveBreak': 840,	// tabs become accordion on this device width
+				'activeIndex' : 0				// active tab index (starts from 0 ). Can be -1 for accordions.
+			});
+
+		});
+	</script>
+    </body>
+</html>
